@@ -1446,9 +1446,9 @@ GameObject:
   - 114: {fileID: 11486774}
   - 114: {fileID: 11480636}
   - 114: {fileID: 11411396}
-  - 114: {fileID: 11488252}
+  - 114: {fileID: 11409070}
   m_Layer: 0
-  m_Name: Player V2
+  m_Name: Player V3
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2355,8 +2355,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0208482333, y: .0825027004, z: .0554274321}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -.0130000003, y: -1.02199996, z: .0299999993}
+  m_LocalScale: {x: .670953035, y: .670952797, z: .670952797}
   m_Children:
   - {fileID: 474164}
   m_Father: {fileID: 449948}
@@ -2888,7 +2888,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.40600002, z: 0}
+  m_LocalPosition: {x: 0, y: 1.40600002, z: -2.00999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 499944}
@@ -3344,8 +3344,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .020849999, y: .082502827, z: .0554273985}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: .0130000003, y: -1.02199996, z: .0299999993}
+  m_LocalScale: {x: .670953035, y: .670952797, z: .670952797}
   m_Children:
   - {fileID: 463020}
   m_Father: {fileID: 449948}
@@ -3369,7 +3369,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -119, y: 165.080002, z: -924}
+  m_LocalPosition: {x: -121.701805, y: 164.477081, z: -918.374695}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 470084}
@@ -3505,11 +3505,26 @@ Animator:
   m_Controller: {fileID: 9100000, guid: e1315b7fad0403f4fb583fe9592aafa9, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11409070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1829717820983b947a15b04a278729e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: .100000001
+  maxSpeed: 1
+  runThresh: .200000003
+  animationController: {fileID: 9599568}
 --- !u!114 &11411396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3551,35 +3566,24 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 220
-    i1: 162
-    i2: 119
-    i3: 120
-    i4: 165
-    i5: 166
-    i6: 195
-    i7: 132
-    i8: 24
-    i9: 83
-    i10: 26
-    i11: 203
-    i12: 238
-    i13: 49
-    i14: 219
-    i15: 1
+    i0: 133
+    i1: 76
+    i2: 255
+    i3: 67
+    i4: 251
+    i5: 147
+    i6: 62
+    i7: 36
+    i8: 137
+    i9: 214
+    i10: 46
+    i11: 210
+    i12: 152
+    i13: 105
+    i14: 222
+    i15: 149
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
---- !u!114 &11488252
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 180002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1829717820983b947a15b04a278729e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &13683388
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -3819,7 +3823,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: animationController
+      value: 
+      objectReference: {fileID: 9599568}
+    - target: {fileID: 0}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 180002}
